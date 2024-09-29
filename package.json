@@ -39,6 +39,7 @@
     "react-select": "^5.8.0",
     "reactstrap": "^9.2.2",
     "recharts": "^2.12.7",
+    "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

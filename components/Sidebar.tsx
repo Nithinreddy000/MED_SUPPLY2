@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { createContext, useState } from "react";
-import arrow from "../../frontend/app/assets/control.png";
-import logo from "../../frontend/app/assets/logo.png";
+import arrow from "../app/assets/control.png";
+import logo from "../app/assets/logo.png";
 import SidebarItem from "./SidebarItem";
 
 export const SidebarContext = createContext<any>(false);
