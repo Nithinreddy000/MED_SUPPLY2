@@ -10,14 +10,18 @@ const center = {
   lng: 78.486671,
 };
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const [location, setLocation] = useState(center);
   const [qrData, setQrData] = useState("HARD_CODED_QR_DATA"); // Hardcoded QR data
   const [receivedQrData, setReceivedQrData] = useState("");
   const qrCodeRef = useRef<HTMLCanvasElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isClient, setIsClient] = useState(false); // For checking client-side
 
+  // Ensure the code only runs on the client-side
   useEffect(() => {
+    setIsClient(true);
+
     // Simulate real-time location updates with hardcoded data
     const interval = setInterval(() => {
       setLocation((prevLocation) => ({
@@ -54,27 +58,33 @@ const page: React.FC = () => {
   };
 
   useEffect(() => {
-    const codeReader = new BrowserMultiFormatReader();
-    codeReader.listVideoInputDevices().then((videoInputDevices) => {
-      if (videoInputDevices.length > 0 && videoRef.current) {
-        const firstDeviceId = videoInputDevices[0].deviceId;
-        codeReader
-          .decodeOnceFromVideoDevice(firstDeviceId, videoRef.current)
-          .then((result) => {
-            if (result) {
-              handleScan(result.getText());
-            }
-          })
-          .catch(handleError);
-      }
-    });
+    if (isClient) {
+      const codeReader = new BrowserMultiFormatReader();
+      codeReader.listVideoInputDevices().then((videoInputDevices) => {
+        if (videoInputDevices.length > 0 && videoRef.current) {
+          const firstDeviceId = videoInputDevices[0].deviceId;
+          codeReader
+            .decodeOnceFromVideoDevice(firstDeviceId, videoRef.current)
+            .then((result) => {
+              if (result) {
+                handleScan(result.getText());
+              }
+            })
+            .catch(handleError);
+        }
+      });
 
-    return () => {
-      if (videoRef.current) {
-        codeReader.reset();
-      }
-    };
-  }, [qrData]);
+      return () => {
+        if (videoRef.current) {
+          codeReader.reset();
+        }
+      };
+    }
+  }, [qrData, isClient]);
+
+  if (!isClient) {
+    return null; // Return null during SSR
+  }
 
   return (
     <div>
@@ -111,4 +121,5 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;
+
