@@ -1,7 +1,7 @@
 // components/LoginForm.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation"; // Ensure you're importing from next/navigation
 import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
@@ -9,13 +9,12 @@ import CustomInput from "./CustomInput";
 // Define types for the API response
 interface ApiResponse {
   message: string;
-  role: string;
+  role: string; // Assuming role is a direct field in the response
 }
 
 const LoginForm = () => {
-  // Initialize state with default values
-  const [email, setEmail] = useState<string>("hospital@example.com");
-  const [password, setPassword] = useState<string>("hospital123");
+  const [email, setEmail] = useState<string>("hospital@example.com"); // Initial email input
+  const [password, setPassword] = useState<string>("hospital123"); // Initial password input
   const router = useRouter();
 
   // Function to handle login
@@ -40,9 +39,8 @@ const LoginForm = () => {
       const data: ApiResponse = await response.json(); // Specify the type of the data
       console.log("API Response:", data); // Log the response to check its structure
 
-      // Parse the body to get the role
-      const parsedBody = JSON.parse(data.body);
-      const role = parsedBody.role;
+      // Directly access the role
+      const role = data.role;
 
       // Redirect based on role
       switch (role) {
