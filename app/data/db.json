@@ -1,0 +1,182 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "medicine": [
+    {
+      "id": 1,
+      "name": "Paracetamol 500mg",
+      "batch": "PN2024A",
+      "manufacturer": "PharmaCo",
+      "expiry": "2025-06-30",
+      "manufactured": "2023-06-01",
+      "quantity": 1000,
+      "category": "Tablet",
+      "reorderLevel": 200,
+      "reorderQuantity": 500,
+      "status": "In Stock",
+      "minStockLevel": 100,
+      "maxStockLevel": 1500,
+      "storageLocation": "Rack 5 / Shelf 3",
+      "tempRequirements": "Store at 25°C",
+      "certification": "GMP Certified"
+    },
+    {
+      "id": "2",
+      "name": "Dolo 650",
+      "batch": "PN2024A",
+      "manufacturer": "PharmaCo",
+      "expiry": "2025-06-30",
+      "manufactured": "2023-06-01",
+      "quantity": 1000,
+      "category": "Tablet",
+      "reorderLevel": 200,
+      "reorderQuantity": 500,
+      "status": "In Stock",
+      "minStockLevel": 100,
+      "maxStockLevel": 1500,
+      "storageLocation": "Rack 5 / Shelf 3",
+      "tempRequirements": "Store at 31°C",
+      "certification": "GMP Certified"
+    },
+    {
+      "id": "123",
+      "name": "321",
+      "batch": "321",
+      "manufacturer": "321",
+      "expiry": "2024-09-06",
+      "manufactured": "2024-09-13",
+      "quantity": "321",
+      "category": "3123",
+      "reorderLevel": "321",
+      "reorderQuantity": "312",
+      "status": "out_of_stock",
+      "minStockLevel": "321",
+      "maxStockLevel": "321",
+      "storageLocation": "321",
+      "tempRequirements": "321",
+      "certification": "321"
+    },
+    {
+      "id": "7",
+      "name": "8",
+      "batch": "56",
+      "manufacturer": "654",
+      "expiry": "0045-06-06",
+      "manufactured": "5645-04-06",
+      "quantity": "654",
+      "category": "654",
+      "reorderLevel": "654",
+      "reorderQuantity": "645",
+      "status": "in_stock",
+      "minStockLevel": "654",
+      "maxStockLevel": "645",
+      "storageLocation": "654",
+      "tempRequirements": "645",
+      "certification": "645"
+    },
+    {
+      "id": "312",
+      "name": "321",
+      "batch": "312",
+      "manufacturer": "3213",
+      "expiry": "2020-03-13",
+      "manufactured": "2024-09-19",
+      "quantity": "32131",
+      "category": "3213",
+      "reorderLevel": "123123",
+      "reorderQuantity": "13",
+      "status": "in_stock",
+      "minStockLevel": "321",
+      "maxStockLevel": "12312",
+      "storageLocation": "321",
+      "tempRequirements": "13",
+      "certification": "321"
+    },
+    {
+      "id": 10,
+      "name": "3",
+      "batch": "4",
+      "manufacturer": "2",
+      "expiry": "2024-09-21",
+      "manufactured": "2024-09-12",
+      "quantity": 423,
+      "category": "4234",
+      "reorderLevel": 2,
+      "reorderQuantity": 42,
+      "status": "out_of_stock",
+      "minStockLevel": 423,
+      "maxStockLevel": 42,
+      "storageLocation": "42",
+      "tempRequirements": "42",
+      "certification": "42",
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "name": "431",
+      "batch": "413",
+      "manufacturer": "431",
+      "expiry": "0001-03-04",
+      "manufactured": "0001-03-04",
+      "quantity": 431,
+      "category": "431",
+      "reorderLevel": 413,
+      "reorderQuantity": 431,
+      "status": "out_of_stock",
+      "minStockLevel": 431,
+      "maxStockLevel": 413,
+      "storageLocation": "41",
+      "tempRequirements": "41",
+      "certification": "413",
+      "imageUrl": ""
+    },
+    {
+      "id": 321,
+      "name": "",
+      "batch": "",
+      "manufacturer": "",
+      "expiry": "",
+      "manufactured": "",
+      "category": "",
+      "status": "",
+      "storageLocation": "",
+      "tempRequirements": "",
+      "certification": "",
+      "imageUrl": ""
+    },
+    {
+      "id": 2020,
+      "name": "",
+      "batch": "",
+      "manufacturer": "",
+      "expiry": "",
+      "manufactured": "",
+      "category": "",
+      "status": "",
+      "storageLocation": "",
+      "tempRequirements": "",
+      "certification": "",
+      "imageUrl": ""
+    }
+  ]
+}
